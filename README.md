@@ -1,2 +1,2 @@
-# TP-Grupal-Lenguajes-Inform-ticos-1
+# TP-Grupal-Lenguajes-Informaticos-1
 Repositorio para Lenguajes Informáticos 1
