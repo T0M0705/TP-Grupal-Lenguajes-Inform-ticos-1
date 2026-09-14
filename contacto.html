@@ -2,11 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Contacto - Ciudad de Gotham</title>
+  <title>Contactos - Ciudad de Gotham</title>
 </head>
 <body>
    <header>
        <nav>
+          <img src="gothampolice.webp" alt="Escudo de la policia de gotham">
+          <h1>Lineas directivas de Gotham</h1>
+          <p>Bienvenidos al centro de atencion al ciudadano y recepcion de denuncias</p>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="ciudad.html">Sobre Gotham</a></li>
@@ -15,4 +18,100 @@
             </ul>
         </nav> 
   </header>
+
+<hr>
+
+<main>
+   <section id="directorio">
+    <h2>Directorio de defensa y emergencias</h2>
+    <p>Linea de contacto rapido con distintas autoridades de Gotham</p>
+    
+
+    <table>
+      <thead>
+        <tr>
+          <th>Lineas de emergencias</th>
+          <th>Nivel de peligro</th>
+          <th>Numero de telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>Agencia de bomberos</td>
+            <td>Bajo/Medio</td>
+            <td><a href="tel:555-345">Marcar Bomberos</a></td>
+        </tr>
+        <tr>
+            <td>Policia de Gotham</td>
+            <td>Medio/Extremo</td>
+            <td><a href="tel:911">Marcar Policia de Gotham</a></td>
+        </tr>
+        <tr>
+            <td>Asilo Arkham</td>
+            <td>Extremo/Altisimo riesgo</td>
+            <td><a href="tel:7684-3523">LLamar a Asilo Arkham</a></td>
+        </tr>
+      </tbody>
+    </table>
+   </section>
+
+   <hr>
+
+   <section id="denuncias">
+     <h2>Buzon de denuncias de Gotham</h2>
+     <p>En este apartado atendemos cualquier denuncia de cualquier ciudadano, se mantiene el anonimato.</p>
+
+     <form action="/procesar_denuncia" method="post">
+      <label for="nombre">Nombre del denunciante</label>
+      <input type="text" id="nombre" 
+         name="nombre" required>
+         <br><br>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" 
+         name="email" required>
+          <br><br>
+      
+      <label for="incidente">Tipo de incidente ocurrido:</label>
+      <select id="incidente" name="incidente">
+        <option value="">Elegir...</option>
+        <option value="robo">Robo o asalto</option>
+        <option value="vandalismo">Vandalismo (explosiones,gas de la risa, rayos laser, etc...)</option>
+        <option value="murcielago">Un avistamiento del murcielago</option>
+        <option value="otro">Otro...</option>
+      </select>
+      <br><br>
+
+      <label for="detalles">Detalles del suceso</label><br>
+      <textarea id="detalles" name="detalles"
+        rows="5">
+      </textarea>
+
+      <button type="submit">Enviar</button>
+     </form>
+   </section>
+
+   <hr>
+
+   <section id="wayne">
+     <h2>Seguro ante destrozos</h2>
+     <p>Hubo una pelea entre el murcielago y el payaso otra vez y destruyeron algo tuyo?</p>
+     <p>NO TE PREOCUPES, en Wayne Corporation te aseguramos tus bienes ante cualquier destrozo</p>
+     <p><a href="tel:687-445">LLAMA AHORA AQUI</a></p>
+    </section>
+
+   <hr>
+
+</main>
+
+<footer>
+   <h3>Redes oficiales</h3>
+   <p>Mail para encontrar a la linea directiva de Gotham:</p>
+   <a href="mailto:SDGWayne@gmail.com">SDGWayne@gmail.com</a>
+   <br>
+   <small>2026 Ciudad de Gotham, matenganse con cuidado</small>
+</footer>
 </body>
+</html>
+
+
