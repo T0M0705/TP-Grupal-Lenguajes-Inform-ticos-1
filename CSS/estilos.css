@@ -3,11 +3,17 @@
     --color-secundario: #0c0c0d;
     --color-acento: #b2b436 ;
     --color-texto:#eeeeee ;
+
+    /* color prueba cambio color acento(#b2b436) por uno 
+    un poquito mas brillante (#bebc2e) */
+    --color-pru1:#dbd112;
+    --color-pru2:#b2b436;
+    --color-pru3:#818318;
     --fuente: "Inter", "sans-serif";
 
-    --ancho-imagen: 30rem;
-    --alto-imagen: 18rem;
-    --radio-imagen: 8px;
+    --ancho-imagen: 32rem;
+    --alto-imagen: 20rem;
+    --radio-imagen: 10px;
 }
 
 * {
@@ -21,6 +27,8 @@ body {
     background-color: var(--color-secundario);
     color: var(--color-texto);
 
+    font-size: 1rem;
+    line-height: 1.6;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -28,6 +36,7 @@ body {
 
 
 nav ul {
+    font-size: 1.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,10 +62,10 @@ main {
 
 
 
-section h3 {
+/*section h3 {
     color: var(--color-acento);
     margin-bottom: 2rem;
-}
+}*/
 
 section img {
     width: var(--ancho-imagen);
@@ -65,4 +74,37 @@ section img {
     border-radius: var(--radio-imagen);
     margin-bottom: 1rem;
 
+}
+
+h1{
+    font-size: 2.2rem;
+    color: var(--color-acento);
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+}
+
+
+/* busque otro color para la Jerarquía */
+
+
+h2{
+    font-size: 1.6rem;
+    color: var(--color-pru3);
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    padding-bottom: 0.5rem;
+}
+
+h3{
+    font-size: 1.3rem;
+    color:var(--color-pru2);
+    margin: 1rem 0;
+}
+
+footer{
+    background-color: var(--color-secundario);
+    color:var(--color-texto);
+    padding:0.5rem 0.5rem ;
+    text-align: center;
+    border-top: 1px solid var(--color-acento);
 }
