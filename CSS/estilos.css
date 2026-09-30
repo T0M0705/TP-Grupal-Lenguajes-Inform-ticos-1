@@ -1,14 +1,14 @@
 :root {
     --color-primario: #1e1e69;
     --color-secundario: #0c0c0d;
-    --color-acento: #b2b436 ;
+    --color-acento: #b49236 ;
     --color-texto:#eeeeee ;
 
     /* color prueba cambio color acento(#b2b436) por uno 
     un poquito mas brillante (#bebc2e) */
-    --color-pru1:#dbd112;
-    --color-pru2:#b2b436;
-    --color-pru3:#818318;
+    --color-pru1:#f3ca15;
+    --color-pru2:#cf9d40;
+    --color-pru3:#966c1d;
     --fuente: "Inter", "sans-serif";
 
     --ancho-imagen: 40rem;
