@@ -1,31 +1,34 @@
+
 :root {
     --color-primario: #1e1e69;
     --color-secundario: #0c0c0d;
-    --color-acento: #b49236 ;
-    --color-texto:#eeeeee ;
+    --color-acento: #c29a2d;
+    --color-texto: #eeeeee;
 
-    /* color prueba cambio color acento(#b2b436) por uno 
-    un poquito mas brillante (#bebc2e) */
-    --color-pru1:#f3ca15;
-    --color-pru2:#cf9d40;
-    --color-pru3:#966c1d;
-    --fuente: "Inter", "sans-serif";
+    /*
+       Color de prueba: se había considerado cambiar el color
+       acento (#b2b436) por uno un poquito más brillante (#c29a2d).
+    */
 
-    --ancho-imagen: 40rem;
-    --alto-imagen: 22rem;
+    --color-pru1: #f3ca15;
+    --color-pru2: #cf9d40;
+    --color-pru3: #966c1d;
+
+    --fuente: "Inter", Arial, sans-serif;
+
+    /*
+       Lasimágenes antes tenían un ancho de 40rem y un alto
+       de 22rem, Ahora el ancho se adapta a cada tarjeta para
+       que las imágenes no desborden en pantallas pequeñas.
+    */
+
+    --ancho-imagen: 100%;
+    --alto-imagen: 14rem;
     --radio-imagen: 10px;
 }
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 3rem 1rem;
 }
 
 body {
@@ -35,85 +38,192 @@ body {
 
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 3rem;
+    margin: 0;
 }
 
+/*
+   No es necsario fijar un ancho máximo ni márgenes para body y main.
+   Bootstrap se ocupa del ancho responsivo mediante .container.
+   En el main, la clase .py-5 controla el espacio vertical.
+*/
 
-nav ul {
-    font-size: 1.3rem;
+.encabezado {
+    background-color: var(--color-secundario);
+    border-bottom: 3px solid var(--color-acento);
+}
+
+/* El contenedor del encabezado organiza título y nav en columna. */
+
+.encabezado .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-nav a {
-    color: var(--color-acento);
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-    color:brown;
-}
-
-
-
-main {
-    padding: 3rem 0;
-}
-
-
-
-/*section h3 {
-    color: var(--color-acento);
-    margin-bottom: 2rem;
-}*/
-
-section img {
-    width: var(--ancho-imagen);
-    height: var(--alto-imagen);
-    object-fit: cover;
-    border-radius: var(--radio-imagen);
-    margin-bottom: 1rem;
-
-    display: block;
-    margin: 0 auto 1rem;
-
-}
-
-h1{
+h1 {
     font-size: 2.2rem;
     color: var(--color-acento);
     text-transform: uppercase;
-    margin: 1.5rem 0;
+}
+
+.titulo-principal {
+    margin: 0;
+    text-align: center;
+    color: var(--color-acento);
 }
 
 
-/* busque otro color para la Jerarquía */
+/* 
+    Añadí menú de navegacion para las clases utilizadas en lugares.
+    Se realizo la implementación acorde a lo requerido en el tp
+*/
+.navegacion {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-navegacion {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    font-size: 1.1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+.menu-enlace {
+    display: block;
+    padding: 0.6rem 0.8rem;
+
+    color: var(--color-acento);
+    text-decoration: none;
+    border-radius: 0.4rem;
+}
+
+.menu-enlace:hover,
+.menu-enlace:focus-visible {
+    text-decoration: underline;
+    color: var(--color-texto);
+    background-color: var(--color-primario);
+}
 
 
-h2{
+/*
+   SECCIÓN DE LUGARES
+ */
+
+/*
+   Se conserva la idea de organizar los lugares como una grilla.
+   En este caso se usa Flexbox con flex-wrap, como solicita
+   la consigna
+*/
+
+.titulo-seccion {
     font-size: 1.6rem;
     color: var(--color-pru3);
     text-transform: uppercase;
-    margin: 1.5rem 0;
+
+    margin: 0 0 1.5rem;
     padding-bottom: 0.5rem;
+    text-align: center;
 }
 
-h3{
+.lugares-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+
+/*
+   TARJETAS DE LOS DESTINOS
+*/
+
+.lugar-card {
+    /*
+       flex-grow: 1
+       flex-shrink: 1
+       flex-basis: 260px
+    */
+
+    flex: 1 1 260px;
+
+    max-width: 400px;
+    min-width: 0;
+
+    background-color: #1b1b24;
+    color: var(--color-texto);
+
+    border: 1px solid #353541;
+    border-radius: var(--radio-imagen);
+    overflow: hidden;
+}
+
+/*
+   Antes se había usado  h3 para definir el color de los títulos. 
+   Ahora se implementa el estilo a los títulos de las tarjetas para controlar mejor la jerarquía.
+*/
+
+h3 {
     font-size: 1.3rem;
-    color:var(--color-pru2);
+    color: var(--color-pru2);
     margin: 1rem 0;
 }
 
-footer{
+.lugar-card .card-title {
+    font-size: 1.3rem;
+    color: var(--color-pru2);
+    margin: 0;
+}
+
+/* Todas las imágenes tienen el mismo alto y ancho adaptable. */
+
+.lugar-card .card-img-top {
+    display: block;
+    width: var(--ancho-imagen);
+    height: var(--alto-imagen);
+    object-fit: cover;
+}
+
+.lugar-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.lugar-card .card-text {
+    margin: 0;
+}
+
+
+
+footer {
     background-color: var(--color-secundario);
-    color:var(--color-texto);
-    padding:0.5rem 0.5rem ;
+    color: var(--color-texto);
+    padding: 0.5rem 0.5rem;
     text-align: center;
     border-top: 1px solid var(--color-acento);
+}
+
+.pie-pagina {
+    padding: 1.5rem 0;
+}
+
+.pie-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.pie-contenido p {
+    margin: 0;
 }
