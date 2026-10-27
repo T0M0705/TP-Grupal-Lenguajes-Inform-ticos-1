@@ -315,3 +315,23 @@ nav.navegacion, .navegacion {
     background-attachment: fixed;  
     border-bottom: 2px solid var(--color-acento); 
 }
+
+aside.aside-personalizado {
+    position: relative; /* Propiedad de posicionamiento requerida */
+    background-color: #1b1b24;
+    border: 1px solid #353541;
+    border-left: 5px solid var(--color-acento);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+aside.aside-personalizado h2 {
+    font-size: 1.4rem;
+    color: var(--color-pru1);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+aside.aside-personalizado p {
+    color: var(--color-texto);
+    margin: 0;
+}
