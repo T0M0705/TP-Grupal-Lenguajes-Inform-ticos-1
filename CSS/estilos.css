@@ -1,4 +1,8 @@
 
+/* =========================
+   VARIABLES Y PALETA DE COLORES
+   ========================= */
+
 :root {
     --color-primario: #1e1e69;
     --color-secundario: #0c0c0d;
@@ -8,6 +12,7 @@
     /*
        Color de prueba: se había considerado cambiar el color
        acento (#b2b436) por uno un poquito más brillante (#c29a2d).
+       Se conserva el dorado actual de la paleta.
     */
 
     --color-pru1: #f3ca15;
@@ -17,8 +22,8 @@
     --fuente: "Inter", Arial, sans-serif;
 
     /*
-       Lasimágenes antes tenían un ancho de 40rem y un alto
-       de 22rem, Ahora el ancho se adapta a cada tarjeta para
+       Las imágenes antes tenían un ancho de 40rem y un alto
+       de 22rem. Ahora el ancho se adapta a cada tarjeta para
        que las imágenes no desborden en pantallas pequeñas.
     */
 
@@ -26,6 +31,11 @@
     --alto-imagen: 14rem;
     --radio-imagen: 10px;
 }
+
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+   ========================= */
 
 * {
     box-sizing: border-box;
@@ -42,17 +52,30 @@ body {
 }
 
 /*
-   No es necsario fijar un ancho máximo ni márgenes para body y main.
+   No es necesario fijar un ancho máximo ni márgenes para body y main.
    Bootstrap se ocupa del ancho responsivo mediante .container.
-   En el main, la clase .py-5 controla el espacio vertical.
+   En el main, las clases .py-4 y .py-5 controlan el espacio vertical.
 */
+
+
+/* =========================
+   ENCABEZADO Y TÍTULOS
+   ========================= */
+
+header {
+    background-color: var(--color-secundario);
+    padding-bottom: 1rem;
+}
 
 .encabezado {
     background-color: var(--color-secundario);
     border-bottom: 3px solid var(--color-acento);
 }
 
-/* El contenedor del encabezado organiza título y nav en columna. */
+/*
+   El contenedor del encabezado organiza el título, el subtítulo
+   y el menú de navegación en una columna mediante Flexbox.
+*/
 
 .encabezado .container {
     display: flex;
@@ -71,6 +94,7 @@ h1 {
     text-align: center;
     color: var(--color-acento);
 }
+
 .subtitulo-principal {
     margin: 0;
     text-align: center;
@@ -78,21 +102,35 @@ h1 {
 }
 
 
-/* 
-    Añadí menú de navegacion para las clases utilizadas en lugares.
-    Se realizo la implementación acorde a lo requerido en el tp
+/* =========================
+   MENÚ DE NAVEGACIÓN
+   ========================= */
+
+/*
+   Se añadieron estas clases para unificar los estilos de navegación
+   utilizados en las distintas páginas del sitio.
+   La implementación utiliza Flexbox, gap y flex-wrap.
 */
+
 .navegacion {
     display: flex;
     justify-content: center;
+
+    /* Menú fijo al desplazarse por la página */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: var(--color-secundario);
+    padding: 0.75rem 0;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
 }
 
 .menu-navegacion {
     list-style: none;
     padding: 0;
     margin: 0;
-
-    font-size: 1.1rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -104,6 +142,9 @@ h1 {
 .menu-enlace {
     display: block;
     padding: 0.6rem 0.8rem;
+
+    /* Tamaño explícito para los enlaces de navegación */
+    font-size: 1.3rem;
 
     color: var(--color-acento);
     text-decoration: none;
@@ -118,14 +159,14 @@ h1 {
 }
 
 
-/*
+/* =========================
    SECCIÓN DE LUGARES
- */
+   ========================= */
 
 /*
    Se conserva la idea de organizar los lugares como una grilla.
    En este caso se usa Flexbox con flex-wrap, como solicita
-   la consigna
+   la consigna del trabajo práctico.
 */
 
 .titulo-seccion {
@@ -147,15 +188,20 @@ h1 {
 }
 
 
-/*
+/* =========================
    TARJETAS DE LOS DESTINOS
-*/
+   ========================= */
 
 .lugar-card {
     /*
        flex-grow: 1
+       Permite que la tarjeta crezca para ocupar espacio disponible.
+
        flex-shrink: 1
+       Permite que la tarjeta se reduzca si hace falta.
+
        flex-basis: 260px
+       Define el tamaño base de cada tarjeta.
     */
 
     flex: 1 1 260px;
@@ -171,9 +217,11 @@ h1 {
     overflow: hidden;
 }
 
+
 /*
-   Antes se había usado  h3 para definir el color de los títulos. 
-   Ahora se implementa el estilo a los títulos de las tarjetas para controlar mejor la jerarquía.
+   Antes se había utilizado section h3 para definir el color
+   de los títulos. Ahora se aplican clases específicas para
+   controlar mejor la jerarquía visual.
 */
 
 h3 {
@@ -188,7 +236,9 @@ h3 {
     margin: 0;
 }
 
-/* Todas las imágenes tienen el mismo alto y ancho adaptable. */
+
+/* Todas las imágenes de las tarjetas mantienen el mismo alto
+   y ancho adaptable, sin deformarse. */
 
 .lugar-card .card-img-top {
     display: block;
@@ -208,12 +258,124 @@ h3 {
 }
 
 
+/* =========================
+   IMÁGENES GENERALES
+   ========================= */
+
+/*
+   Las imágenes dentro de las secciones se adaptan al ancho
+   disponible. Se utiliza height: auto para evitar deformaciones.
+*/
+
+section img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   ESTILOS INDEPENDIENTES DE CONTACTO
+   DIRECCIONES
+   ========================= */
+
+#direcciones {
+    background-color: #262627;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+#direcciones h2 {
+    color: #f3cf06;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+#direcciones h3 {
+    color: #9e8205;
+    font-size: 1.2rem;
+    margin-bottom: 1px;
+}
+
+#direcciones hr {
+    width: 45px;
+    border: 2px solid var(--color-acento);
+    opacity: 1;
+    margin: 0.5rem 0 1.2rem 0;
+}
+
+#direcciones p {
+    color: #7a7a7e;
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+}
+
+#direcciones a {
+    color: #7a7a7e;
+    text-decoration: none;
+}
+
+#direcciones a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+
+/* =========================
+   BANNER CON EFECTO PARALLAX
+   ========================= */
+
+.banner-parallax {
+    width: 100%;
+    height: 400px;
+
+    background-image: url('../img/lugares/Oficina.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    border-bottom: 2px solid var(--color-acento);
+}
+
+
+/* =========================
+   AVISO DESTACADO
+   ========================= */
+
+aside.aside-personalizado {
+    position: relative; /* Propiedad de posicionamiento requerida */
+
+    background-color: #1b1b24;
+    border: 1px solid #353541;
+    border-left: 5px solid var(--color-acento);
+
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+aside.aside-personalizado h2 {
+    font-size: 1.4rem;
+    color: var(--color-pru1);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+aside.aside-personalizado p {
+    color: var(--color-texto);
+    margin: 0;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
 
 footer {
     background-color: var(--color-secundario);
     color: var(--color-texto);
-    padding: 0.5rem 0.5rem;
+
+    padding: 0.5rem;
     text-align: center;
+
     border-top: 1px solid var(--color-acento);
 }
 
@@ -233,97 +395,24 @@ footer {
     margin: 0;
 }
 
-section img {
-    width: 100%;
-    height: 100%;
-}
 
-/* Estilos independientes de CONTACTO */
-    /* DIRECCIONES*/
+/* =========================
+   AJUSTES PARA PANTALLAS PEQUEÑAS
+   ========================= */
 
-#direcciones {
-      background-color: #262627;
-      border-radius: 10px;
-      padding: 2rem;
-}
+@media (max-width: 576px) {
 
-#direcciones h2 {
-   color:#f3cf06;
-   font-size: 1.8rem;
-   margin-bottom: 2rem;
-}
+    .titulo-principal {
+        font-size: 1.5rem;
+    }
 
-#direcciones h3 {
-   color:#9e8205;
-   font-size: 1.2rem;
-   margin-bottom: 1px;
-}
+    .menu-navegacion {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-#direcciones hr{
-   width: 45px;
-   border: 2px solid var(--color-acento);
-   opacity: 1;
-   margin: 0.5rem 0 1.2rem 0;
-}
+    .menu-enlace {
+        text-align: center;
+    }
 
-#direcciones p {
-    color:#7a7a7e;
-    font-size: 0.95rem;
-    margin-bottom: 0.6rem;
-}
-
-#direcciones a {
-  color: #7a7a7e;
-  text-decoration: none;
-}
-
-#direcciones a:hover {
-  color: var(--color-acento);
-  text-decoration: underline;
-}
-
-header {
-    background-color: var(--color-secundario);
-    padding-bottom: 1rem;
-}
-
-nav.navegacion, .navegacion {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: var(--color-secundario);
-    padding: 0.75rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
-}
-
-
-.banner-parallax {
-    width: 100%;
-    height: 400px;
-    background-image: url('../img/lugares/Oficina.jpg');
-    background-size: cover;        
-    background-position: center;   
-    background-repeat: no-repeat;  
-    background-attachment: fixed;  
-    border-bottom: 2px solid var(--color-acento); 
-}
-
-aside.aside-personalizado {
-    position: relative; /* Propiedad de posicionamiento requerida */
-    background-color: #1b1b24;
-    border: 1px solid #353541;
-    border-left: 5px solid var(--color-acento);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-}
-
-aside.aside-personalizado h2 {
-    font-size: 1.4rem;
-    color: var(--color-pru1);
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-}
-
-aside.aside-personalizado p {
-    color: var(--color-texto);
-    margin: 0;
 }
