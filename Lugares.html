@@ -18,39 +18,66 @@
 <body>
 
     <header class="encabezado">
+
         <div class="container py-4">
 
             <h1 class="titulo-principal">
                 Lugares para visitar en Gotham
             </h1>
 
-            <nav class="navegacion" aria-label="Navegación principal">
+            <nav class="navegacion"
+                 aria-label="Navegación principal">
+
                 <ul class="menu-navegacion">
+
                     <li>
-                        <a class="menu-enlace" href="Index.html">Inicio</a>
+                        <a class="menu-enlace" href="Index.html">
+                            Inicio
+                        </a>
                     </li>
+
                     <li>
-                        <a class="menu-enlace" href="Ciudad.html">Sobre Gotham</a>
+                        <a class="menu-enlace" href="Ciudad.html">
+                            Sobre Gotham
+                        </a>
                     </li>
+
                     <li>
-                        <a class="menu-enlace" href="Lugares.html">Atractivos y lugares para visitar</a>
+                        <a class="menu-enlace" href="Lugares.html"
+                           aria-current="page">
+                            Atractivos y lugares para visitar
+                        </a>
                     </li>
+
                     <li>
-                        <a class="menu-enlace" href="Contacto.html">Contacto</a>
+                        <a class="menu-enlace" href="Contacto.html">
+                            Contacto
+                        </a>
                     </li>
+
                 </ul>
+
             </nav>
 
         </div>
+
     </header>
 
     <main class="container py-5">
 
-        <section class="seccion-lugares" >
+        <section class="seccion-lugares"
+                 aria-labelledby="titulo-lugares">
 
             <h2 id="titulo-lugares" class="titulo-seccion">
                 Atractivos para descubrir
             </h2>
+
+            <p class="introduccion-lugares">
+                Explorá los rincones más emblemáticos de Gotham,
+                desde sus monumentos históricos hasta sus distritos
+                modernos. Seleccioná «Leer más» para conocer los
+                detalles de cada destino.
+            </p>
 
             <div class="lugares-grid">
 
@@ -62,23 +89,43 @@
                         alt="Fachada y torre de la Catedral de Gotham">
 
                     <div class="card-body">
+
                         <h3 class="card-title">
                             Catedral de Gotham
                         </h3>
 
                         <p class="card-text">
-                            La Catedral de Gotham es uno de los edificios
-                            más emblemáticos de la ciudad y una visita
-                            imprescindible para conocer su patrimonio histórico.
-                            Su arquitectura gótica, sus enormes vitrales y sus
-                            altas torres conforman una de las postales más
-                            características de Old Gotham.
-
-                            Situada en el corazón del distrito histórico,
-                            ha sobrevivido a décadas de conflictos y
-                            transformaciones urbanas, convirtiéndose en
-                            un símbolo de la resiliencia de la ciudad.
+                            Una visita imprescindible para descubrir
+                            la arquitectura gótica y el patrimonio
+                            histórico de Old Gotham.
                         </p>
+
+                        <details class="lugar-detalles">
+
+                            <summary>Leer más</summary>
+
+                            <div class="detalle-contenido">
+
+                                <p class="card-text">
+                                    La Catedral de Gotham es uno de los
+                                    edificios más emblemáticos de la ciudad.
+                                    Sus enormes vitrales, sus altas torres
+                                    y su imponente arquitectura ofrecen una
+                                    de las postales más características
+                                    del distrito histórico.
+                                </p>
+
+                                <p class="card-text">
+                                    Situada en el corazón de Old Gotham,
+                                    ha sobrevivido a décadas de conflictos
+                                    y transformaciones urbanas, convirtiéndose
+                                    en un símbolo de la resiliencia de la ciudad.
+                                </p>
+
+                            </div>
+
+                        </details>
+
                     </div>
 
                 </article>
@@ -91,23 +138,43 @@
                         alt="Edificios y zona comercial del Diamond District">
 
                     <div class="card-body">
+
                         <h3 class="card-title">
                             Diamond District
                         </h3>
 
                         <p class="card-text">
-                            Si se busca conocer el Gotham moderno, el
-                            Diamond District es el lugar indicado. Este
-                            elegante distrito reúne boutiques, restaurantes
-                            de alta categoría, hoteles de lujo y algunas de
-                            las empresas más importantes de la ciudad.
-
-                            Sus grandes edificios, avenidas iluminadas y
-                            actividad comercial representan un marcado
-                            contraste con los barrios históricos.
-                            Es un destino ideal para disfrutar de las
-                            compras y la gastronomía.
+                            El distrito ideal para conocer el lado moderno
+                            de Gotham, disfrutar de las compras y explorar
+                            su oferta gastronómica.
                         </p>
+
+                        <details class="lugar-detalles">
+
+                            <summary>Leer más</summary>
+
+                            <div class="detalle-contenido">
+
+                                <p class="card-text">
+                                    Este elegante distrito reúne boutiques,
+                                    restaurantes de alta categoría, hoteles
+                                    de lujo y algunas de las empresas más
+                                    importantes de la ciudad.
+                                </p>
+
+                                <p class="card-text">
+                                    Sus grandes edificios, avenidas iluminadas
+                                    y su intensa actividad comercial representan
+                                    un marcado contraste con los barrios
+                                    históricos. Es un destino atractivo para
+                                    quienes buscan disfrutar de las compras,
+                                    la gastronomía y el ambiente urbano.
+                                </p>
+
+                            </div>
+
+                        </details>
+
                     </div>
 
                 </article>
@@ -120,28 +187,56 @@
                         alt="Torre del Reloj de Gotham">
 
                     <div class="card-body">
+
                         <h3 class="card-title">
                             Torre del Reloj de Gotham
                         </h3>
 
                         <p class="card-text">
-                            La Torre del Reloj es uno de los edificios
-                            más reconocibles de Gotham. Su enorme reloj
-                            domina el horizonte de Chinatown y constituye
-                            un punto de referencia de Bleake Island.
-
-                            Después de atravesar una historia complicada,
-                            el edificio representa la capacidad de la ciudad
-                            para reconstruirse. Desde sus alrededores
-                            pueden contemplarse algunos de los principales
-                            edificios y el horizonte urbano.
-
-                            Los martes y jueves se ofrecen recorridos
-                            guiados con paradas en sus miradores.
+                            Un punto de referencia de Chinatown desde
+                            el que se puede contemplar el horizonte
+                            de Bleake Island.
                         </p>
+
+                        <details class="lugar-detalles">
+
+                            <summary>Leer más</summary>
+
+                            <div class="detalle-contenido">
+
+                                <p class="card-text">
+                                    La Torre del Reloj es uno de los edificios
+                                    más reconocibles de Gotham. Su enorme reloj
+                                    domina el horizonte de Chinatown y constituye
+                                    uno de los puntos de referencia más
+                                    importantes de la zona.
+                                </p>
+
+                                <p class="card-text">
+                                    Después de atravesar una historia complicada,
+                                    el edificio representa la capacidad de la
+                                    ciudad para reconstruirse. Desde sus
+                                    alrededores pueden contemplarse algunos
+                                    de los principales edificios y el
+                                    horizonte urbano.
+                                </p>
+
+                                <p class="card-text">
+                                    Los martes y jueves se ofrecen recorridos
+                                    guiados con paradas en los miradores de
+                                    la torre.
+                                </p>
+
+                            </div>
+
+                        </details>
+
                     </div>
 
                 </article>
+
+
+                <!-- ASILO ARKHAM -->
 
                 <article class="lugar-card card">
 
@@ -151,41 +246,78 @@
                         alt="Edificio y terrenos del Asilo Arkham">
 
                     <div class="card-body">
+
                         <h3 class="card-title">
                             Asilo Arkham
                         </h3>
 
+                        <!-- Introducción visible -->
                         <p class="card-text">
-                            Ubicado en una isla frente a la ciudad,
-                            el Asilo Arkham es uno de los lugares más
-                            conocidos y controvertidos de Gotham.
-                            Su arquitectura victoriana, sus extensos
-                            terrenos y su ubicación aislada lo convierten
-                            en un sitio singular.
-
-                            Como parte de un programa especial, la oficina
-                            de turismo ofrece visitas supervisadas para
-                            quienes presenten la documentación requerida.
-                            Los recorridos duran aproximadamente cuatro
-                            horas e incluyen los pabellones y salas más
-                            importantes del establecimiento.
-
-                            <strong>Aviso al visitante:</strong>
-                            debido a su historial de incidentes de seguridad,
-                            se recomienda consultar las condiciones de acceso
-                            antes de planificar la visita.
+                            Una institución histórica de Gotham,
+                            reconocida por su arquitectura victoriana,
+                            sus extensos terrenos y su ubicación aislada.
                         </p>
+
+                        <!-- Texto desplegable -->
+                        <details class="lugar-detalles">
+
+                            <summary>Leer más</summary>
+
+                            <div class="detalle-contenido">
+
+                                <p class="card-text">
+                                    Ubicado en una isla frente a la ciudad,
+                                    el Asilo Arkham es uno de los lugares
+                                    más conocidos y controvertidos de Gotham.
+                                    Fundado como institución para el tratamiento
+                                    de criminales con enfermedades mentales,
+                                    forma parte inseparable de la historia
+                                    de la ciudad.
+                                </p>
+
+                                <p class="card-text">
+                                    Como parte de un programa turístico
+                                    especial, la oficina de turismo ofrece
+                                    visitas supervisadas para quienes
+                                    presenten la documentación requerida.
+                                    Los recorridos duran aproximadamente
+                                    cuatro horas e incluyen los pabellones
+                                    y salas más importantes del establecimiento.
+                                </p>
+
+                                <p class="card-text">
+                                    <strong>Aviso al visitante:</strong>
+                                    debido a su historial de incidentes
+                                    de seguridad, se recomienda consultar
+                                    las condiciones de acceso antes de
+                                    planificar la visita.
+                                </p>
+
+                            </div>
+
+                        </details>
+
                     </div>
 
                 </article>
 
+
             </div>
+            <!-- Fin de la grilla de tarjetas -->
+
         </section>
 
     </main>
 
+
+    <!-- =========================
+         PIE DE PÁGINA
+         ========================= -->
+
     <footer class="pie-pagina">
+
         <div class="container pie-contenido">
+
             <p>
                 2026 Oficina de Turismo de Gotham.
                 Todos los derechos reservados.
@@ -194,13 +326,16 @@
             <p>
                 <small>
                     Descargo de responsabilidad: la ciudad no se hace
-                    responsable por dirigibles sospechosos, toxinas de la
-                    risa o daños derivados de persecuciones de automóviles
-                    blindados.
+                    responsable por dirigibles sospechosos, toxinas
+                    de la risa o daños derivados de persecuciones
+                    de automóviles blindados.
                 </small>
             </p>
+
         </div>
+
     </footer>
 
 </body>
+
 </html>

@@ -257,6 +257,41 @@ h3 {
     margin: 0;
 }
 
+/* =========================
+   TARJETAS DESPLEGABLES
+   ========================= */
+
+.introduccion-lugares {
+    max-width: 750px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.lugar-detalles {
+    width: 100%;
+}
+
+.lugar-detalles summary {
+    color: var(--color-acento);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.lugar-detalles summary:hover,
+.lugar-detalles summary:focus-visible {
+    color: var(--color-pru1);
+}
+
+.detalle-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.detalle-contenido p {
+    margin: 0;
+}
 
 /* =========================
    IMÁGENES GENERALES
