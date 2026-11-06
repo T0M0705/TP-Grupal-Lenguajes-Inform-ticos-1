@@ -363,7 +363,7 @@ section img {
     width: 100%;
     height: 400px;
 
-    background-image: url('../img/lugares/Oficina.jpg');
+    background-image: url('../img/lugares/gotham1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -372,6 +372,44 @@ section img {
     border-bottom: 2px solid var(--color-acento);
 }
 
+.banner-parallax1 {
+    width: 100%;
+    height: 400px;
+
+    background-image: url('../img/lugares/gotham4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.banner-parallax2 {
+    width: 100%;
+    height: 400px;
+
+    background-image: url('../img/lugares/gotham3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.banner-parallax3 {
+    width: 100%;
+    height: 400px;
+
+    background-image: url('../img/lugares/gotham2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    border-bottom: 2px solid var(--color-acento);
+}
 
 /* =========================
    AVISO DESTACADO
