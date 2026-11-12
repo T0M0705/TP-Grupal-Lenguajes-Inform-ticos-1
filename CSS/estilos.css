@@ -314,8 +314,9 @@ section img {
    ========================= */
 
 #direcciones {
+    background-color: #121214;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 4.5rem 2.5rem; 
 }
 
 #direcciones h2 {
@@ -325,9 +326,9 @@ section img {
 }
 
 #direcciones h3 {
-    color: #9e8205;
+    color: #caa708;
     font-size: 1.2rem;
-    margin-bottom: 1px;
+    margin-bottom: 50px;
 }
 
 #direcciones hr {
@@ -492,3 +493,168 @@ footer {
 .sin-puntas {
     border-radius: 15px;
   }
+
+/* =========================
+   BUZÓN DE DENUNCIAS (CONTACTO)
+   ========================= */
+
+#denuncias {
+    max-width: 800px;
+    margin: 3rem auto;       
+    background-color: #151615;
+    border: 1px solid #ecad00;  
+    border-radius: 30px;
+    padding: 4.5rem;
+    box-shadow: 0 10px 30px rgba(136, 87, 13, 0.5);
+}
+
+#denuncias h2 {
+    color: var(--color-acento);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#denuncias p {
+    text-align: center;
+    color: #b0b0ba;
+    margin-bottom: 2rem;
+}
+
+.grupo-campo {
+    margin-bottom: 1.25rem;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    border: 1px solid #353541;
+    border-radius: 6px;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+}
+
+.boton-denuncia {
+    width: 100%;
+    background-color: var(--color-acento);
+    color: var(--color-secundario);
+    font-weight: bold;
+    font-size: 1.05rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: 0.2s;
+}
+
+.boton-denuncia:hover {
+    background-color: var(--color-pru1);
+}
+
+/* =========================
+   WAYNE SEGURO ANTE DESTROZOS (CONTACTO)
+   ========================= */
+
+#wayne {
+    margin: 3rem auto;       
+    background-color: #151615;
+    border: 1px solid #ecad00;  
+    border-radius: 15px;
+    padding: 4.5rem;
+    box-shadow: 0 10px 30px rgba(136, 87, 13, 0.5);
+}
+
+#wayne h2 {
+    color: var(--color-acento);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.boton-wayne {
+    text-align: center;
+
+}
+
+.boton-wayne a {
+    color: #ffee00;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.boton-wayne a:hover {
+    color: #966c1d;
+    text-decoration: underline;
+}
+
+/* =========================
+   DIRECTORIO DEFENSA Y EMERGENCIAS (CONTACTO)
+   ========================= */
+
+#directorio {
+    margin: 3rem auto;       
+    background-color: #151615;
+    border: 1px solid #ecad00;  
+    border-radius: 15px;
+    padding: 4.5rem;
+    box-shadow: 0 10px 30px rgba(136, 87, 13, 0.5);
+    } 
+
+#directorio h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #c4a90f;
+}
+
+#directorio p {
+    font-size: 1.15rem;
+    text-align: center;
+    color: #555557;
+    margin-bottom: 2.5rem;
+}
+
+#directorio table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+}
+
+#directorio th,
+#directorio td {
+    padding: 1.2rem 1.5rem; 
+    text-align: left;     
+    border-bottom: 1px solid #353541;
+}
+
+#directorio th {
+    color: var(--color-pru1);
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--color-acento);
+}
+
+#directorio a {
+    color: var(--color-acento);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#directorio a:hover {
+    color: var(--color-pru1);
+    text-decoration: underline;
+}
