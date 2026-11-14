@@ -15,31 +15,62 @@
 
 <body>
     <header class="encabezado">
-        <div class="container py-4">
-            
-            <h1 class="titulo-principal"> 
-                Bienvenidos a Gotham 
-            </h1>
-    </header>
-            <p class="subtitulo-principal"><em>"La ciudad que nunca duerme... por miedo a que se metan en su casa."</em></p>
         
-            <nav class="navegacion" aria-label="Navegación principal">
-                <ul class="menu-navegacion">
-                    <li>
-                        <a class="menu-enlace" href="Index.html">Inicio</a>
+        <div class="container py-4">
+            <h1 class="titulo-principal"> Bienvenidos a Gotham </h1>
+        </div>
+
+    </header>
+
+    <nav class="navbar navbar-expand-lg  navbar-dark navegacion "
+            aria-label="Navegación principal">
+
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center gap-2 " href="Index.html">
+                <img src="img/lugares/logo.png"
+                        alt="Logo de Gotham"
+                        width="50"
+                        height="50">
+                <span class="nombre-sitio">GOTHAM</span>
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir o cerrar el menú">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+                id="menuPrincipal">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link menu-enlace" href="Index.html">Inicio</a>
                     </li>
-                    <li>
-                        <a class="menu-enlace" href="Ciudad.html">Sobre Gotham</a>
+
+                    <li class="nav-item"> 
+                        <a class="nav-link menu-enlace"href="Ciudad.html">Sobre Gotham</a>
                     </li>
-                    <li>
-                        <a class="menu-enlace" href="Lugares.html">Atractivos y lugares para visitar</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link menu-enlace active"href="Lugares.html" aria-current="page">Atractivos y lugares para visitar</a>
                     </li>
-                    <li>
-                        <a class="menu-enlace" href="Contacto.html">Contacto</a>
+
+                    <li class="nav-item">
+                        <a class="nav-link menu-enlace"href="Contacto.html">Contacto</a>
                     </li>
                 </ul>
-            </nav>
+            </div>
         </div>
+    </nav>
     
 
     <main>
