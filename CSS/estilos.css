@@ -97,20 +97,6 @@ h1 {
 
 
 /* =========================
-   MENÚ DE NAVEGACIÓN
-   ========================= */
-
-/*
-   Se añadieron estas clases para unificar los estilos de navegación
-   utilizados en las distintas páginas del sitio.
-   La implementación utiliza Flexbox, gap y flex-wrap.
-*/
-
-/*
-
-
-
-/* =========================
    MENÚ DE NAVEGACIÓN BOOTSTRAP
    ========================= */
 
@@ -206,7 +192,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 1.5rem;
 }
 
@@ -315,6 +301,45 @@ h3 {
 .detalle-contenido p {
     margin: 0;
 }
+
+
+/* =========================
+   BUSCADOR DE LUGARES
+   ========================= */
+
+.buscador-lugares {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+}
+
+.buscador-lugares label {
+    color: var(--color-acento);
+    font-weight: 600;
+}
+
+.buscador-lugares input {
+    background-color: #1b1b24;
+    color: var(--color-texto);
+    border: 1px solid var(--color-acento);
+    padding: 0.8rem;
+}
+
+.buscador-lugares{
+    background-color: #0c0c0d;
+    color: var(--color-texto);
+    border-color: var(--color-pru1);
+}
+
+.buscador-lugares input::placeholder {
+    color: #9999a3;
+}
+
+#sinResultados {
+    color: var(--color-pru1);
+    text-align: center;
+}
+
+
 
 /* =========================
    IMÁGENES GENERALES
