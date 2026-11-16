@@ -706,3 +706,69 @@ footer {
     color: var(--color-pru1);
     text-decoration: underline;
 }
+
+/* tarjeta del lema de la ciudad */
+
+.tarjeta-lema{
+    background-color: #1b1b24;
+    border: 1px solid #353541;
+    border-left: 4px solid var(--color-acento);
+}
+
+.tarjeta-lema .badge{
+    background-color: var(--color-acento);
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-lema h4{
+    color: var(--color-pru1);
+    font-style: italic;
+    margin: 0.5rem;
+}
+
+.tarjeta-lema p{
+    color:var(--color-texto);
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+
+/* Tarjetas de datos clave */
+
+#datos-clave .card{
+    background-color: #1b1b24;
+    color: var(--color-texto);
+    border: 1px solid #353541;
+    border-top: 4px solid var(--color-acento);
+}
+
+/* Desplegable dsitritos */
+
+#distritos .card {
+    background-color: #1b1b24;
+    color: var(--color-texto);
+    border: 1px solid #353541;
+}
+
+
+.distrito-detalles summary{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-pru2);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.distrito-detalles summary:hover{
+    color: var(--color-pru1);
+}
+
+.distrito-contenido{
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid #353541;
+}
