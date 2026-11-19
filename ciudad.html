@@ -8,6 +8,11 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/estilos.css">
+    <script>
+        if (localStorage.getItem('tema') === 'claro') {
+        document.documentElement.classList.add('modo-claro');
+        }
+    </script>
 
 </head>
 
@@ -20,6 +25,7 @@
     
     <nav class="navbar navbar-expand-lg  navbar-dark navegacion "
             aria-label="Navegación principal">
+        <button id="btn-tema" class="btn btn-outline-warning btn-sm ms-lg-3" aria-label="Cambiar tema">☀️ Modo Claro</button>
 
         <div class="container">
 
@@ -77,7 +83,7 @@
             <div class="row align-items-center g-4">
                 
                 <div class="col-12 col-md-8">
-                    <p class="lead text-light">Fundada en el siglo XVII como un asentamiento portuario estratégico, Gotham City floreció durante la revolución industrial gracias al comercio marítimo y su imponente desarrollo arquitectónico.</p>
+                    <p class="lead">Fundada en el siglo XVII como un asentamiento portuario estratégico, Gotham City floreció durante la revolución industrial gracias al comercio marítimo y su imponente desarrollo arquitectónico.</p>
                     <p class="text-secondary">Con el paso de las décadas, las familias fundadoras impulsaron un horizonte neogótico único en el mundo. Hoy, su historia llena de leyendas urbanas, filantropía multimillonaria y una vibrante vida nocturna convierte cada recorrido en una aventura inolvidable para el visitante.</p> 
                 </div>
 
@@ -94,7 +100,7 @@
         </section>
 
         <section id="datos-clave" class="container my-5">
-            <h2 class="text-white mb-3">Características Principales</h2>
+            <h2 class="mb-3">Características Principales</h2>
             <p class="lead mb-4">
                 La Ciudad combina arquitectura gótica monumental cargada de gárgolas con autopistas multinivel y puertos de carga pesada. Sus tres distritos insulares se conectan mediante puentes colgantes levadizos bajo un clima perpetuamente lluvioso y frío, con un diseño vial pensado más para persecuciones a alta velocidad que para el transporte público habitual.
             </p>
@@ -108,7 +114,7 @@
                         <div class="card-body">
                             <small class="text-warning text-uppercase d-block mb-1">Población Estimada</small>
                             <h5>~ 6.000.000</h5>
-                            <small class="text-light">(Variable según la noche)</small>
+                            <small>(Variable según la noche)</small>
                         </div>
                     </div>
                 </div>
@@ -118,7 +124,7 @@
                         <div class="card-body">
                             <small class="text-warning text-uppercase d-block mb-1">Año de Fundación</small>
                             <h5>1635</h5>
-                            <small class="text-light">Asentamiento colonial original</small>
+                            <small>Asentamiento colonial original</small>
                         </div>
                     </div>
                 </div> 
@@ -127,7 +133,7 @@
                         <div class="card-body">
                             <small class="text-warning text-uppercase d-block mb-1">Clima</small>
                             <h5>Oceánico frío</h5>
-                            <small class="text-light">Lluvias constantes y poca luz solar</small>
+                            <small>Lluvias constantes y poca luz solar</small>
                         </div>
                     </div>
                 </div> 
@@ -136,7 +142,7 @@
                         <div class="card-body">
                             <small class="text-warning text-uppercase d-block mb-1">Gentilicio</small>
                             <h5>Gothamita</h5>
-                            <small class="text-light">Gótico/a</small>
+                            <small>Gótico/a</small>
                         </div>
                     </div>
                 </div>         
@@ -421,7 +427,8 @@
             </p>
         </div>
     </footer>
-   
+
+    <script src="tema.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

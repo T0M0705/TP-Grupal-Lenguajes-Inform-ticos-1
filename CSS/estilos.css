@@ -9,27 +9,34 @@
     --color-acento: #c29a2d;
     --color-texto: #eeeeee;
 
-    /*
-       Color de prueba: se había considerado cambiar el color
-       acento (#b2b436) por uno un poquito más brillante (#c29a2d).
-       Se conserva el dorado actual de la paleta.
-    */
+    --bg-tarjeta: #1b1b24;
+    --borde-tarjeta: #353541;
+    --bg-seccion-alt: #14141a;
+    --bg-contacto: #1b1b24;
 
     --color-pru1: #f3ca15;
     --color-pru2: #cf9d40;
     --color-pru3: #966c1d;
 
-    --fuente: "Inter", Arial, sans-serif;
-
-    /*
-       Las imágenes antes tenían un ancho de 40rem y un alto
-       de 22rem. Ahora el ancho se adapta a cada tarjeta para
-       que las imágenes no desborden en pantallas pequeñas.
-    */
-
     --ancho-imagen: 100%;
     --alto-imagen: 14rem;
     --radio-imagen: 10px;
+}
+
+html.modo-claro {
+    --color-primario: #d0d0ff;
+    --color-secundario: #f0f2f5;
+    --color-acento: #966c1d;
+    --color-texto: #1a1a1a;
+
+    --bg-tarjeta: #ffffff;
+    --borde-tarjeta: #cccccc;
+    --bg-seccion-alt: #e4e6eb;
+    --bg-contacto: #ffffff;
+
+    --color-pru1: #b8970b;
+    --color-pru2: #966c1d;
+    --color-pru3: #5c410e;
 }
 
 
@@ -218,10 +225,10 @@ h1 {
     max-width: 400px;
     min-width: 0;
 
-    background-color: #1b1b24;
+    background-color: var(--bg-tarjeta);
     color: var(--color-texto);
 
-    border: 1px solid #353541;
+    border: 1px solid var(--borde-tarjeta);
     border-radius: var(--radio-imagen);
     overflow: hidden;
 }
@@ -318,7 +325,7 @@ h3 {
 }
 
 .buscador-lugares input {
-    background-color: #1b1b24;
+    background-color: var(--bg-tarjeta);
     color: var(--color-texto);
     border: 1px solid var(--color-acento);
     padding: 0.8rem;
@@ -362,7 +369,7 @@ section img {
    ========================= */
 
 #direcciones {
-    background-color: #121214;
+    background-color: var(--bg-seccion-alt);
     border-radius: 10px;
     padding: 4.5rem 2.5rem; 
 }
@@ -549,7 +556,7 @@ footer {
 #denuncias {
     max-width: 800px;
     margin: 3rem auto;       
-    background-color: #151615;
+    background-color: var(--bg-seccion-alt);
     border: 1px solid #ecad00;  
     border-radius: 30px;
     padding: 4.5rem;
@@ -621,7 +628,7 @@ footer {
 
 #wayne {
     margin: 3rem auto;       
-    background-color: #151615;
+    background-color: var(--bg-seccion-alt);
     border: 1px solid #ecad00;  
     border-radius: 15px;
     padding: 4.5rem;
@@ -656,7 +663,7 @@ footer {
 
 #directorio {
     margin: 3rem auto;       
-    background-color: #151615;
+    background-color: var(--bg-seccion-alt);
     border: 1px solid #ecad00;  
     border-radius: 15px;
     padding: 4.5rem;
@@ -710,8 +717,8 @@ footer {
 /* tarjeta del lema de la ciudad */
 
 .tarjeta-lema{
-    background-color: #1b1b24;
-    border: 1px solid #353541;
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--borde-tarjeta);
     border-left: 4px solid var(--color-acento);
 }
 
@@ -738,18 +745,18 @@ footer {
 /* Tarjetas de datos clave */
 
 #datos-clave .card{
-    background-color: #1b1b24;
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--borde-tarjeta);
     color: var(--color-texto);
-    border: 1px solid #353541;
     border-top: 4px solid var(--color-acento);
 }
 
 /* Desplegable dsitritos */
 
 #distritos .card {
-    background-color: #1b1b24;
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--borde-tarjeta);
     color: var(--color-texto);
-    border: 1px solid #353541;
 }
 
 
