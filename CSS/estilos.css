@@ -332,7 +332,7 @@ h3 {
 }
 
 .buscador-lugares{
-    background-color: #0c0c0d;
+    background-color: var(--color-secundario);
     color: var(--color-texto);
     border-color: var(--color-pru1);
 }
